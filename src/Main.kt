@@ -15,31 +15,23 @@ fun main() {
     fun valorTotal
                 (a: Double = precoUnitario , b: Int = quantidadeProduto): Double {
         return a * b
-
-        var format = money.format(valorTotal())
     }
 
 
     fun valorImposto
                 (a: Double = valorTotal(), b: Double = taxaImposto): Double {
         return a * (b/100)
-
-        var format = money.format(valorImposto())
     }
 
 
     fun valorTotalComImposto
                 (a: Double = valorTotal(), b: Double = valorImposto()): Double {
         return a + b
-
-        var format = money.format(valorTotalComImposto())
     }
 
     fun valorComImpostoIndividual
                 (a: Double = valorTotalComImposto(), b: Int = quantidadeProduto): Double {
         return a / b
-
-        var format = money.format(valorComImpostoIndividual())
     }
 
 
@@ -47,32 +39,24 @@ fun main() {
     fun valorDaMargemDeLucroTotal
                 (a: Double = valorTotal(), b: Double = margemLucro): Double {
         return a * (b/100)
-
-        var format = money.format(valorDaMargemDeLucroTotal())
     }
 
 
     fun valorDaMargemDeLucroIndividual
                 (a: Double = valorDaMargemDeLucroTotal(), b: Int = quantidadeProduto): Double {
         return a / b
-
-        var format = money.format(valorDaMargemDeLucroIndividual())
     }
 
 
     fun precoDeVendaTotalFinal
                 (a: Double = valorTotalComImposto(), b: Double = valorDaMargemDeLucroTotal()): Double {
         return a + b
-
-        var format = money.format(precoDeVendaTotalFinal())
     }
 
 
     fun precoDeVendaFinalIndividual
                 (a: Double = precoDeVendaTotalFinal(), b: Int = quantidadeProduto): Double {
         return a / b
-
-        var format = money.format(precoDeVendaFinalIndividual())
     }
 
     println("Nome Produto: $nomeProduto")
